@@ -13,7 +13,7 @@ def test_get_pets():
     assert isinstance(r.json(), list)
 
 def test_create_pet():
-    new_pet = {"name": "Luna", "type": "dog"}
+    new_pet = {"name": "Fibi", "type": "dog"}
     r = requests.post(f"{BASE_URL}/pets", json=new_pet)
     assert r.status_code == 200
     data = r.json()
