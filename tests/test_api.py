@@ -17,6 +17,6 @@ def test_create_pet():
     r = requests.post(f"{BASE_URL}/pets", json=new_pet)
     assert r.status_code == 200
     data = r.json()
-    assert data["name"] == "Luna"
+    assert data["name"] == "Fibi"
     assert data["type"] == "dog"
     assert "id" in data
